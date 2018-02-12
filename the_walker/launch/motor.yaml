@@ -1,0 +1,311 @@
+fl_hip_rotate_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fl_hip_rotate_joint
+    joint_speed: 1
+    motor:
+        id: 1
+        init: 0
+        min: 300
+        max: 800
+
+fl_hip_left_right_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fl_hip_left_right_joint
+    joint_speed: 1
+    motor:
+        id: 2
+        init: 0
+        min: 500
+        max: 680
+
+fl_hip_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fl_hip_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 3
+        init: 0
+        min: 430
+        max: 920
+
+fl_knee_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fl_knee_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 4
+        init: 0
+        min: 200
+        max: 920
+
+fl_foot_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fl_foot_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 5
+        init: 0
+        min: 200
+        max: 580
+
+fl_foot_left_right_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fl_foot_left_right_joint
+    joint_speed: 1
+    motor:
+        id: 6
+        init: 0
+        min: 260
+        max: 750
+
+bl_hip_rotate_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: bl_hip_rotate_joint
+    joint_speed: 1
+    motor:
+        id: 7
+        init: 0
+        min: 310
+        max: 600
+
+bl_hip_left_right_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: bl_hip_left_right_joint
+    joint_speed: 1
+    motor:
+        id: 8
+        init: 0
+        min: 470
+        max: 760
+
+bl_hip_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: bl_hip_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 9
+        init: 0
+        min: 430
+        max: 710
+
+bl_knee_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: bl_knee_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 10 
+        init: 0
+        min: 200
+        max: 1023 
+
+bl_foot_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: bl_foot_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 11
+        init: 0
+        min: 160
+        max: 589
+
+bl_foot_left_right_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: bl_foot_left_right_joint
+    joint_speed: 1
+    motor:
+        id: 12
+        init: 0
+        min: 300
+        max: 800
+
+fr_hip_rotate_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fr_hip_rotate_joint
+    joint_speed: 1
+    motor:
+        id: 13
+        init: 0
+        min: 225
+        max: 310
+
+fr_hip_left_right_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fr_hip_left_right_joint
+    joint_speed: 1
+    motor:
+        id: 14
+        init: 0
+        min: 310
+        max: 540
+
+fr_hip_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fr_hip_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 15
+        init: 0
+        min: 115
+        max: 580
+
+fr_knee_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fr_knee_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 16
+        init: 0
+        min: 58
+        max: 821
+
+fr_foot_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fr_foot_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 17
+        init: 0
+        min: 440
+        max: 850
+
+fr_foot_left_right_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fr_foot_left_right_joint
+    joint_speed: 1
+    motor:
+        id: 18
+        init: 0
+        min: 230
+        max: 760
+
+br_hip_rotate_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: br_hip_rotate_joint
+    joint_speed: 1
+    motor:
+        id: 19
+        init: 0
+        min: 213
+        max: 731
+
+br_hip_left_right_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: br_hip_left_right_joint
+    joint_speed: 1
+    motor:
+        id: 20
+        init: 0
+        min: 500 
+        max: 700
+
+br_hip_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: br_hip_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 21
+        init: 0
+        min: 585
+        max: 700 
+
+br_knee_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: br_knee_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 22
+        init: 0
+        min: 60
+        max: 820
+
+br_foot_front_back_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: br_foot_front_back_joint
+    joint_speed: 1
+    motor:
+        id: 23
+        init: 0
+        min: 500
+        max: 800
+
+br_foot_left_right_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: br_foot_left_right_joint
+    joint_speed: 1
+    motor:
+        id: 24
+        init: 0
+        min: 260
+        max: 770
