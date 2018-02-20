@@ -1,0 +1,83 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+    <node name="dynamixel_manager" pkg="dynamixel_controllers" type="controller_manager.py" required="true" output="screen">
+        <rosparam>
+            namespace: dxl_manager
+            serial_ports:
+                robot_port:
+                    port_name: "/dev/ttyUSB0"
+                    baud_rate: 1000000
+                    min_motor_id: 1
+                    max_motor_id: 25
+                    update_rate: 20
+        </rosparam>
+    </node>
+
+<!-- Start tilt joint controller -->
+    <rosparam file="$(find the_walker)/launch/motor.yaml" command="load"/>
+    <node name="controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port robot_port
+                                fl_hip_rotate_controller
+                                fl_hip_left_right_controller
+                                fl_hip_front_back_controller
+                                fl_knee_front_back_controller
+                                fl_foot_front_back_controller
+                                fl_foot_left_right_controller
+                                bl_hip_rotate_controller
+                                bl_hip_left_right_controller
+                                bl_hip_front_back_controller
+                                bl_knee_front_back_controller
+                                bl_foot_front_back_controller
+                                bl_foot_left_right_controller
+                                fr_hip_rotate_controller
+                                fr_hip_left_right_controller
+                                fr_hip_front_back_controller
+                                fr_knee_front_back_controller
+                                fr_foot_front_back_controller
+                                fr_foot_left_right_controller
+                                br_hip_rotate_controller
+                                br_hip_left_right_controller
+                                br_hip_front_back_controller
+                                br_knee_front_back_controller
+                                br_foot_front_back_controller
+                                br_foot_left_right_controller
+                                "
+          output="screen"/>
+<!-- Start joints trajectory controller controller -->
+    <rosparam file="$(find the_walker)/launch/jtc.yaml" command="load"/>
+    <node name="controller_spawner_meta" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --type=meta
+                                fl_hip_rotate_controller
+                                fl_hip_left_right_controller
+                                fl_hip_front_back_controller
+                                fl_knee_front_back_controller
+                                fl_foot_front_back_controller
+                                fl_foot_left_right_controller
+                                bl_hip_rotate_controller
+                                bl_hip_left_right_controller
+                                bl_hip_front_back_controller
+                                bl_knee_front_back_controller
+                                bl_foot_front_back_controller
+                                bl_foot_left_right_controller
+                                fr_hip_rotate_controller
+                                fr_hip_left_right_controller
+                                fr_hip_front_back_controller
+                                fr_knee_front_back_controller
+                                fr_foot_front_back_controller
+                                fr_foot_left_right_controller
+                                br_hip_rotate_controller
+                                br_hip_left_right_controller
+                                br_hip_front_back_controller
+                                br_knee_front_back_controller
+                                br_foot_front_back_controller
+                                br_foot_left_right_controller
+                                "
+                  output="screen"/>
+
+    <node name="motion_saver" pkg="the_walker" type="motion_saver.py" output="screen" launch-prefix="xterm -e"/>
+    <node name="motion_player" pkg="the_walker" type="motion_player.py" output="screen" launch-prefix="xterm -e"/>
+    <node name="keyboard" pkg="keyboard" type="keyboard"/>
+
+</launch>
